@@ -6,21 +6,29 @@ import { createStore } from 'redux';
 import rootReducer from './reducers/rootReducer';
 import history from 'history/createBrowserHistory';
 import loadable from '@loadable/component';
+import DefaultLayout from './layouts/default/default';
+import LoadingComponent from './components/Loading/loading';
+import ErrorBoundaryComponent from './components/Error/error';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 const store = createStore(rootReducer);
 
 const RootComponent = () => 
-<Provider store={store}>
-  <React.Suspense fallback={<div>Loading...</div>}>
-    <Router history={history()}>
-      <Switch>
-        <Route path="/" exact component={loadable(() => import('./components/Home/Home'))}></Route>
-        <Route path="/about" component={loadable(() => import('./components/About/About'))}></Route>
-      </Switch>
-    </Router>
-  </React.Suspense>
-</Provider>
+  <Provider store={store}>
+      <Router history={history()}>
+        <Switch>
+          <ErrorBoundaryComponent>
+            <DefaultLayout>
+                <React.Suspense fallback={<LoadingComponent />}>
+                    <Route path="/" exact component={loadable(() => import('./pages/Home/Home'))}></Route>
+                    <Route path="/about" component={loadable(() => import('./pages/About/About'))}></Route>
+                </React.Suspense>
+            </DefaultLayout>
+          </ErrorBoundaryComponent>
+        </Switch>
+      </Router>
+  </Provider>
 
 ReactDOM.render(<RootComponent />, document.getElementById('root'));
