@@ -2,7 +2,13 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import propTypes from 'prop-types';
 
-export class Product extends React.Component {
+export class ProductComponent extends React.Component {
+  static propTypes = {
+    title: propTypes.string,
+    description: propTypes.string,
+    image: propTypes.string
+  };
+
   constructor(props) {
     super(props);
   }
@@ -21,10 +27,4 @@ export class Product extends React.Component {
       </React.Fragment>
     );
   }
-}
-
-Product.propTypes = {
-  title: propTypes.string,
-  description: propTypes.string,
-  image: propTypes.string
 }
