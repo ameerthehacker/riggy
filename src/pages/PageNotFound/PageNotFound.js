@@ -4,7 +4,7 @@ import { Jumbotron, Container } from 'react-bootstrap';
 export default () => {
   return (
     <Container>
-      <Jumbotron>
+      <Jumbotron className="text-center">
         <h1>OOPS 404!</h1>
         <p>
           We could not find that page

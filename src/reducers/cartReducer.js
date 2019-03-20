@@ -27,6 +27,10 @@ export default (state = {}, action) => {
         if(state[productId] > 0) {
           state[productId] -= 1;
         }
+        
+        if(state[productId] == 0) {
+          delete state[productId];
+        }
       }
 
       return state;

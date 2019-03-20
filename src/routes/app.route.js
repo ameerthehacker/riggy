@@ -14,6 +14,10 @@ export default function AppRoute() {
                    exact 
                    component={React.lazy(() => import('../pages/Home/Home'))}
             />
+            <Route path="/cart" 
+                   exact 
+                   component={React.lazy(() => import('../pages/Cart/Cart'))}
+            />
             <Route path="/about" 
                    component={React.lazy(() => import('../pages/About/About'))}
              />

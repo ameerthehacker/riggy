@@ -15,7 +15,7 @@ export default class ErrorBoundaryComponent extends React.Component {
     if(this.state.hasError) {
       return (
         <Container>
-          <Jumbotron>
+          <Jumbotron className="text-center">
             <h1>OOPS!</h1>
             <p>
               Something went wrong...
