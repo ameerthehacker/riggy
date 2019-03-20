@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import ErrorBoundaryComponent from './components/Error/error';
+import ErrorBoundaryComponent from './pages/Error/error';
 import productsReducer from './reducers/productsReducer';
 import cartReducer from './reducers/cartReducer';
 import AppRoute from './routes/app.route';
