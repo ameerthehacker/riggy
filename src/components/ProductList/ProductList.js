@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ProductComponent from '../Product/Product';
+import ProductComponent from '../product/Product';
 import propTypes from 'prop-types';
 
 export default class ProductListComponent extends React.Component {
