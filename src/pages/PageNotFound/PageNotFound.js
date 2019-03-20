@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
 
-export default function PageNotFoundPage() {
+export default () => {
   return (
     <Container>
       <Jumbotron>

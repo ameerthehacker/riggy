@@ -17,6 +17,7 @@ export default class DefaultLayout extends React.Component {
             <span className="mr-auto"></span>
             <Nav>
               <NavLink exact activeClassName="active" to="/" className="nav-link">Home</NavLink>
+              <NavLink exact activeClassName="active" to="/cart" className="nav-link">Cart</NavLink>
               <NavLink exact activeClassName="active" to="/about" className="nav-link">About</NavLink>
             </Nav>
           </Navbar.Collapse>
