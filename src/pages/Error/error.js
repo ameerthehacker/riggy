@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron, Container } from 'react-bootstrap';
 
 export default class ErrorBoundaryComponent extends React.Component {
   constructor(props) {
@@ -14,14 +14,14 @@ export default class ErrorBoundaryComponent extends React.Component {
   render() {
     if(this.state.hasError) {
       return (
-        <div class="container">
+        <Container>
           <Jumbotron>
             <h1>OOPS!</h1>
             <p>
               Something went wrong...
             </p>
           </Jumbotron>
-        </div>
+        </Container>
       )
     }
     else {
