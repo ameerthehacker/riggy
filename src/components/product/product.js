@@ -28,15 +28,14 @@ export default class ProductComponent extends React.Component {
 
   render() {
     const btnAddToCart = (
-      this.props.quantity === undefined || this.props.quantity == 0?
-      <Button onClick={this.onBtnAddToCartClick.bind(this)} 
-              variant="primary">Add to Cart
-      </Button>:
-      <CounterComponent count={this.props.quantity}
-                        onBtnIncrementClick={this.onBtnAddToCartClick.bind(this)}
-                        onBtnDecrementClick={this.onBtnRemoveFromCartClick.bind(this)} 
-      />
-    );
+                      this.props.quantity === undefined || this.props.quantity == 0?
+                      <Button onClick={this.onBtnAddToCartClick.bind(this)} 
+                              variant="primary">Add to Cart
+                      </Button>:
+                      <CounterComponent count={this.props.quantity}
+                                        onBtnIncrementClick={this.onBtnAddToCartClick.bind(this)}
+                                        onBtnDecrementClick={this.onBtnRemoveFromCartClick.bind(this)} 
+                      />);
 
     return (
       <React.Fragment>
