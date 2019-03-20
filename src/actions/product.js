@@ -1,0 +1,5 @@
+const PRODUCT_ACTIONS = {
+  GET_PRODUCTS: "GET_PRODUCTS"
+}
+
+export default PRODUCT_ACTIONS;

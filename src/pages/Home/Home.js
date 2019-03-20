@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ProductListContainer from '../../containers/ProductList/ProductList';
 
-export default class HomePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
+export default class HomePage extends React.Component {
   render() {
-    return (
-      <h1>Hello World!</h1>
-    );
+    return <ProductListContainer />
   }
 }

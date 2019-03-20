@@ -2,15 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route, Router, Switch } from 'react-router-dom';
-import { createStore } from 'redux';
-import rootReducer from './reducers/rootReducer';
+import { createStore, combineReducers } from 'redux';
 import history from 'history/createBrowserHistory';
 import DefaultLayout from './layouts/default/default';
 import LoadingComponent from './components/Loading/loading';
 import ErrorBoundaryComponent from './components/Error/error';
 
+import productsReducer from './reducers/productsReducer';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './index.css';
+
+const rootReducer = combineReducers({ 
+  products: productsReducer
+});
 
 const store = createStore(rootReducer);
 

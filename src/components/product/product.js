@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import propTypes from 'prop-types';
 
-export class ProductComponent extends React.Component {
+export default class ProductComponent extends React.Component {
   static propTypes = {
     title: propTypes.string,
     description: propTypes.string,
